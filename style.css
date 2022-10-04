@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+
+.color {
+    display: inline-block;
+    padding: 40px;
+    border: 1px black solid;    
+}
