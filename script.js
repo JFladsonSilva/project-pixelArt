@@ -28,14 +28,14 @@ let button = document.getElementById('button-random-color');
 button.addEventListener('click', setColor);
 
 /* Requisito 5 LocalStorage */
-localStorage.setItem('colorPalette', setColor)
+// localStorage.setItem('colorPalette', setColor)
 
 
-onload = function() {
-    let cores = localStorage.getItem('colorPalette')
-    let palet = document.getElementById('colorPalette') 
-    palet = cores
+// onload = function() {
+//     let cores = localStorage.getItem('colorPalette')
+//     let palet = document.getElementById('colorPalette') 
+//     palet = cores
 
-    console.log('???')
+//     console.log('???')
 
-}
+// }
