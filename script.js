@@ -20,9 +20,22 @@ function setColor() {
     palletR.style.backgroundColor = RGBgenerator()
     palletB.style.backgroundColor = RGBgenerator()
     palletG.style.backgroundColor = RGBgenerator()
-    
+
 } 
 
 let button = document.getElementById('button-random-color');
 
 button.addEventListener('click', setColor);
+
+/* Requisito 5 LocalStorage */
+localStorage.setItem('colorPalette', setColor)
+
+
+onload = function() {
+    let cores = localStorage.getItem('colorPalette')
+    let palet = document.getElementById('colorPalette') 
+    palet = cores
+
+    console.log('???')
+
+}
