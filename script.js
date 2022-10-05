@@ -7,7 +7,7 @@ palletB.style.backgroundColor = 'blue'
 let palletG = document.getElementsByClassName('color')[3]
 palletG.style.backgroundColor = 'green'
 
-function setColor(){
+function RGBgenerator(){
     let R = 0;
     let G = 0;
     let B = 0;
@@ -16,13 +16,13 @@ function setColor(){
     B = Math.floor(Math.random() * 255);
     return 'rgb' + '(' + R + ', ' +  G + ', ' + R + ')';
 }
-function alteraCor() {
-    palletR.style.backgroundColor = setColor()
-    palletB.style.backgroundColor = setColor()
-    palletG.style.backgroundColor = setColor()
+function setColor() {
+    palletR.style.backgroundColor = RGBgenerator()
+    palletB.style.backgroundColor = RGBgenerator()
+    palletG.style.backgroundColor = RGBgenerator()
     
 } 
 
 let button = document.getElementById('button-random-color');
 
-button.addEventListener('click', alteraCor);
+button.addEventListener('click', setColor);
