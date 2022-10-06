@@ -1,3 +1,7 @@
+window.onload = function (){
+    // createPixels()
+}
+
 let palletR = document.getElementsByClassName('color')[1]
 palletR.style.backgroundColor = 'red'
 
@@ -15,27 +19,32 @@ function RGBgenerator(){
     G = Math.floor(Math.random() * 255);
     B = Math.floor(Math.random() * 255);
     return 'rgb' + '(' + R + ', ' +  G + ', ' + R + ')';
+    
 }
+
 function setColor() {
     palletR.style.backgroundColor = RGBgenerator()
     palletB.style.backgroundColor = RGBgenerator()
     palletG.style.backgroundColor = RGBgenerator()
 
 } 
+// localStorage.setItem('RGBcolor', (rgb))
+console.log(RGBgenerator())
+
+
+
+
 
 let button = document.getElementById('button-random-color');
 
 button.addEventListener('click', setColor);
 
-/* Requisito 5 LocalStorage */
-// localStorage.setItem('colorPalette', setColor)
-
-
-// onload = function() {
-//     let cores = localStorage.getItem('colorPalette')
-//     let palet = document.getElementById('colorPalette') 
-//     palet = cores
-
-//     console.log('???')
-
+/* ----------requisito 6----------------- */
+// function createPixels(){
+//     let pixel = document.getElementsByClassName('pixel')[0]
+//     let pixels = document.getElementById('pixel-board')
+//     for(let i = 0; i < 5; i+=1){
+        
+//         document.appendChild(pixel)
+//     }
 // }

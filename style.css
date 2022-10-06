@@ -10,3 +10,14 @@ body {
 .color.black {
     background-color: black;
 }
+/* ----------requisito 6----------------- */
+#pixel-board {
+    width: 210px;
+}
+
+.pixel {
+    background-color: gray;
+    padding: 40px;
+    display: inline-block;
+    border: 1px black solid;
+}
