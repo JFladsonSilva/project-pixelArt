@@ -28,4 +28,5 @@ body {
     border: 1px black solid;
     background-color: white;
     display: inline-flex;
+    margin: 1px;
 }

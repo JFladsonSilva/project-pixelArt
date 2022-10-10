@@ -10,7 +10,13 @@ window.onload = function (){
             console.log(arr)
         }
     }
+    function palletsemCor() {
+        palletR.style.backgroundColor = 'black'
+        palletB.style.backgroundColor = 'black'
+        palletG.style.backgroundColor = 'black'
+    }
     recuperaCor()
+    palletsemCor()
 }
 
 // VARIAVEIS COM AS CORES
