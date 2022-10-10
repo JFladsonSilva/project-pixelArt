@@ -13,6 +13,7 @@ window.onload = function (){
     recuperaCor()
 }
 
+// VARIAVEIS COM AS CORES
 let palletR = document.getElementsByClassName('color')[1]
 palletR.style.backgroundColor = 'red'
 
@@ -22,6 +23,8 @@ palletB.style.backgroundColor = 'blue'
 let palletG = document.getElementsByClassName('color')[3]
 palletG.style.backgroundColor = 'green'
 
+
+// FUNÇÃO PARA GERAR CORES
 function RGBgenerator(){
     let R = 0;
     let G = 0;
@@ -36,7 +39,7 @@ function RGBgenerator(){
     
 }
 
-
+// FUNÇÃO PARA SETAR A COR
 function setColor() {
      let R = RGBgenerator()
      let G = RGBgenerator()
@@ -47,10 +50,35 @@ function setColor() {
      palletG.style.backgroundColor = B
      localStorage.setItem('RGBcolor', 'rgb' + '(' + R + ', ' +  G + ', ' + R + ')')
      console.log();
-   
-   
-
 } 
+
+let button = document.getElementById('button-random-color');
+button.addEventListener('click', setColor);
+
+
+
+       
+
+
+
+function geraPixer() {
+    let quadro = document.getElementById('pixel-board') 
+
+for(let i = 0; i < 25; i +=1){
+    let pixel = document.createElement('div');
+    pixel.classList.add('pixel');
+    quadro.appendChild(pixel);
+}
+    return quadro;
+}
+
+geraPixer()
+
+
+
+
+
+
 
 // function adicionaItensStorage() {
 //     const itens = RGBgenerator
@@ -70,10 +98,6 @@ function setColor() {
 // localStorage.setItem('RGBcolor', (rgb))
 // console.log(RGBgenerator())
 
-let button = document.getElementById('button-random-color');
-
-button.addEventListener('click', setColor);
-
 /* ----------requisito 6----------------- */
 // function createPixels(){
 //     let pixel = document.getElementsByClassName('pixel')[0]
@@ -83,3 +107,5 @@ button.addEventListener('click', setColor);
 //         document.appendChild(pixel)
 //     }
 // }
+
+
