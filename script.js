@@ -11,7 +11,7 @@ window.onload = function () {
     recuperaCor()
 }
 
-// VARIAVEIS COM AS CORES
+// VARIAVEIS COM AS CORES DOS QUADRINHOS DA PALETA
 let palletR = document.getElementsByClassName('color')[1]
 palletR.style.backgroundColor = 'red'
 
@@ -20,6 +20,9 @@ palletB.style.backgroundColor = 'blue'
 
 let palletG = document.getElementsByClassName('color')[3]
 palletG.style.backgroundColor = 'green'
+
+let  pallet1 = document.getElementsByClassName('black')[0]
+pallet1.style.backgroundColor = 'black'
 
 // FUNÇÃO PARA GERAR CORES
 function RGBgenerator() {
@@ -65,11 +68,12 @@ function pintora(){
 //requisito 8
 function mudaCores(){
     let pixels = document.querySelectorAll('.pixel')
+    let corSelected = document.querySelector('.selected')
     for(let i = 0; i < pixels.length; i += 1){
         pixels[i].addEventListener('click', () => {
-            pixels[i].style.backgroundColor = 'black'
+            pixels[i].style.backgroundColor = corSelected.style.backgroundColor;
         })
     }
-    console.log(pixels)
+    console.log(corSelected)
 }
 mudaCores()

@@ -12,9 +12,6 @@ body {
     padding: 40px;
     border: 1px black solid;    
 }
-.color.black {
-    background-color: black;
-}
 /* ----------requisito 6----------------- */
 #pixel-board {
     width: 250px;
