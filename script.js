@@ -10,39 +10,7 @@ window.onload = function () {
     }
     recuperaCor()
 
-    //REQUISITO 9
-pallet1.addEventListener('click', () => {
-    pallet1.classList.add('selected')
-    palletR.classList.remove('selected')
-    palletG.classList.remove('selected')
-    palletB.classList.remove('selected')
-    console.log('black');
-})
 
-palletR.addEventListener('click', () => {
-    palletR.classList.add('selected')
-    pallet1.classList.remove('selected')
-    palletG.classList.remove('selected')
-    palletB.classList.remove('selected')
-    console.log('red');
-})
-
-palletB.addEventListener('click', () => {
-    palletB.classList.add('selected')
-    palletR.classList.remove('selected')
-    palletG.classList.remove('selected')
-    pallet1.classList.remove('selected')
-    console.log('blue');
-})
-
-palletG.addEventListener('click', () => {
-    palletG.classList.add('selected')
-    palletR.classList.remove('selected')
-    pallet1.classList.remove('selected')
-    palletB.classList.remove('selected')
-    console.log('green');
-})
-// -----------------------------------------------------
 mudaCores()
 
 }
@@ -78,8 +46,6 @@ function setColor() {
     let armazenaCor = [R, G, B]
 
     localStorage.setItem('colorPalette', JSON.stringify(armazenaCor))
-    let teste = localStorage.getItem('colorPalette')
-    console.log(teste);
 }
 // EVENTLISTINER PARA AS CORES ALEATÓRIAS
 let button = document.getElementById('button-random-color');
@@ -104,12 +70,78 @@ function pintora(){
 //requisito 8
 function mudaCores(){
     let pixels = document.querySelectorAll('.pixel')
-    let corSelected = document.querySelector('.selected')
+    
+    // console.log(corSelected)
     for(let i = 0; i < pixels.length; i += 1){
         pixels[i].addEventListener('click', () => {
+            let corSelected = document.querySelector('.selected')
             pixels[i].style.backgroundColor = corSelected.style.backgroundColor;
+            console.log(corSelected)
         })
     }
 }
 
+    //REQUISITO 9 e 10
+    function removeClass() {
+        let selected = document.querySelector('.selected')
+        selected.classList.remove('selected')
+    }
+   
+    pallet1.addEventListener('click', () => {
+        removeClass()
+        pallet1.classList.add('selected')
+        console.log('black');
+    })
+    
+    palletR.addEventListener('click', () => {
+        removeClass()
+        palletR.classList.add('selected')
+        console.log('red');
+    })
+    
+    palletB.addEventListener('click', () => {
+        removeClass()
+        palletB.classList.add('selected')
+        console.log('blue');
+    })
+    
+    palletG.addEventListener('click', () => {
+        removeClass()
+        palletG.classList.add('selected')
+        console.log('green');
+    })
+    // -----------------------------------------------------
+
+    // pallet1.addEventListener('click', () => {
+    //     pallet1.classList.add('selected')
+    //     palletR.classList.remove('selected')
+    //     palletG.classList.remove('selected')
+    //     palletB.classList.remove('selected')
+    //     console.log('black');
+    // })
+    
+    // palletR.addEventListener('click', () => {
+    //     palletR.classList.add('selected')
+    //     pallet1.classList.remove('selected')
+    //     palletG.classList.remove('selected')
+    //     palletB.classList.remove('selected')
+    //     console.log('red');
+    // })
+    
+    // palletB.addEventListener('click', () => {
+    //     palletB.classList.add('selected')
+    //     palletR.classList.remove('selected')
+    //     palletG.classList.remove('selected')
+    //     pallet1.classList.remove('selected')
+    //     console.log('blue');
+    // })
+    
+    // palletG.addEventListener('click', () => {
+    //     palletG.classList.add('selected')
+    //     palletR.classList.remove('selected')
+    //     pallet1.classList.remove('selected')
+    //     palletB.classList.remove('selected')
+    //     console.log('green');
+    // })
+    // // -
 
