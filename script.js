@@ -9,6 +9,42 @@ window.onload = function () {
         }
     }
     recuperaCor()
+
+    //REQUISITO 9
+pallet1.addEventListener('click', () => {
+    pallet1.classList.add('selected')
+    palletR.classList.remove('selected')
+    palletG.classList.remove('selected')
+    palletB.classList.remove('selected')
+    console.log('black');
+})
+
+palletR.addEventListener('click', () => {
+    palletR.classList.add('selected')
+    pallet1.classList.remove('selected')
+    palletG.classList.remove('selected')
+    palletB.classList.remove('selected')
+    console.log('red');
+})
+
+palletB.addEventListener('click', () => {
+    palletB.classList.add('selected')
+    palletR.classList.remove('selected')
+    palletG.classList.remove('selected')
+    pallet1.classList.remove('selected')
+    console.log('blue');
+})
+
+palletG.addEventListener('click', () => {
+    palletG.classList.add('selected')
+    palletR.classList.remove('selected')
+    pallet1.classList.remove('selected')
+    palletB.classList.remove('selected')
+    console.log('green');
+})
+// -----------------------------------------------------
+mudaCores()
+
 }
 
 // VARIAVEIS COM AS CORES DOS QUADRINHOS DA PALETA
@@ -74,6 +110,6 @@ function mudaCores(){
             pixels[i].style.backgroundColor = corSelected.style.backgroundColor;
         })
     }
-    console.log(corSelected)
 }
-mudaCores()
+
+
