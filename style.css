@@ -4,26 +4,74 @@
 }
 body {
     text-align: center;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    background-image: url('./images/cidade.jpg');
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#conteiner {
+    max-width: 700px;
+    margin: auto;
 }
 
 .color {
     display: inline-block;
     padding: 40px;
     border: 1px black solid;    
+    border-radius: 5px;
+    cursor: url('./images/cursor-pointer.svg'), pointer;
+    /* cursor: pointer; */
+
 }
 /* ----------requisito 6----------------- */
 #pixel-board {
     width: 250px;
     height: 205px;
     margin: auto;
-    padding: 20px;
+    padding: 10px 0;
+    padding-bottom: 28px;
+    background-color: rgba(255, 255, 255, 0.15);
+    cursor: url('./images/cursor-pointer.svg'), pointer;
+    border-radius: 10px;
+
 }
 .pixel {
     width: 40px;
     height: 40px;
-    border: 1px black solid;
-    background-color: white;
+    /* border: 1px black solid; */
+    border: none;
+    background-color: #fff;
     display: inline-flex;
     margin: 1px;
+    margin-right: 2px;
+    border-radius: 2px;
+    cursor: url('./images/cursor-pointer.svg'), pointer;
+}
+
+#color-palette {
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 360px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    background-color: #29C7AC;
+    cursor: url('./images/cursor-pointer.svg'), pointer;
+}
+
+input {
+    padding: 3px;
+    border-radius: 5px;
 }
