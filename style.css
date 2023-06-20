@@ -5,49 +5,51 @@
 body {
     text-align: center;
     /* background-color: antiquewhite; */
-    background-image: url('./images/cidade.jpg');
+    background-image: url('./images/388523.jpg');
     background-size: cover;
-    color: #fff;
+    color: darkslategrey;
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    width: 100vw;
+    height: 100vh;
 }
 
 #conteiner {
-    max-width: 700px;
-    margin: auto;
+    /* max-width: 700px; */
+    /* margin: auto; */
 }
 
 .color {
     display: inline-block;
-    padding: 40px;
-    border: 1px black solid;    
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    margin: 2px;
     border-radius: 5px;
     cursor: url('./images/cursor-pointer.svg'), pointer;
     /* cursor: pointer; */
-
 }
 /* ----------requisito 6----------------- */
 #pixel-board {
-    width: 250px;
-    height: 205px;
-    margin: auto;
-    padding: 10px 0;
-    padding-bottom: 28px;
-    background-color: rgba(255, 255, 255, 0.15);
+    /* margin: auto; */
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px auto;
     cursor: url('./images/cursor-pointer.svg'), pointer;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 
 }
 .pixel {
     width: 40px;
     height: 40px;
-    /* border: 1px black solid; */
-    border: none;
+    border: 1px black solid;
     background-color: #fff;
-    display: inline-flex;
+    /* display: inline-flex; */
+    display: inline-block;
     margin: 1px;
-    margin-right: 2px;
-    border-radius: 2px;
     cursor: url('./images/cursor-pointer.svg'), pointer;
 }
 
